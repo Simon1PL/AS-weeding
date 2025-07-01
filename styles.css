@@ -8,6 +8,7 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f8f8f8;
     color: #222;
+    font-weight: bold;
 }
 .main-layout {
     display: flex;
@@ -16,7 +17,7 @@ body {
     position: relative;
 }
 .navbar {
-    position: sticky;
+    position: absolute;
     top: 0;
     width: 100%;
     background: rgba(255,255,255,0.15); /* transparent */
@@ -47,12 +48,12 @@ body {
 }
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: 500;
     transition: color 0.2s;
 }
 .nav-links a:hover {
-    color: #7a8c6e;
+    color: #282927;
 }
 .hero-fixed {
     position: fixed;
@@ -76,13 +77,13 @@ body {
 .hero-overlay {
     width: 100%;
     background: rgba(0, 0, 0, 0);
-    color: #fff;
     padding: 3rem 2rem 2.5rem 2.5rem;
     border-radius: 0 0 0 0;
     text-align: left;
     position: absolute;
     left: 0;
     bottom: 0;
+    color: white;
 }
 .hero-overlay h1 {
     font-size: 2.8rem;
@@ -101,6 +102,9 @@ body {
     position: relative;
     z-index: 2;
     box-shadow: -2px 0 8px rgba(0,0,0,0.04);
+    padding-left: 15px; /* scroll is right padding */
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 .scrollable-content::before {
     content: '';
@@ -110,7 +114,7 @@ body {
     width: calc((var(--karta-width) / var(--karta-height)) * 100vh);
     height: 100vh;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.363)),
+        linear-gradient(rgba(255, 255, 255, 0.363), rgba(255, 255, 255, 0.363)),
         url('karta.png') top center/100% 100% no-repeat;
     opacity: 0.5;
     z-index: 1;
@@ -121,30 +125,22 @@ body {
     z-index: 2;
 }
 .details {
-    color: #fff;
     padding: 4rem 2rem;
     text-align: center;
+    position: relative;
 }
 .details h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
 }
-.rsvp-btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.8rem 2.2rem;
-    color: #7a8c6e;
-    border-radius: 30px;
-    text-decoration: none;
+.countdown-timer {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: background 0.2s, color 0.2s;
-}
-.rsvp-btn:hover {
-    color: #5a6c4e;
+    letter-spacing: 2px;
+    text-align: center;
 }
 .story {
-    color: #222;
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -176,7 +172,6 @@ body {
 .rsvp-form button {
     padding: 0.8rem;
     background: #7a8c6e;
-    color: #fff;
     border: none;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -248,7 +243,6 @@ section {
     }
 }
 .address-section {
-    color: #222;
     padding: 4rem 2rem;
     text-align: center;
 }
