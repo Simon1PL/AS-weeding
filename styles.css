@@ -1,0 +1,251 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+.main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.15); /* transparent */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #7a8c6e;
+}
+.hero-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.hero-overlay {
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    padding: 3rem 2rem 2.5rem 2.5rem;
+    border-radius: 0 0 0 0;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+.scrollable-content {
+    margin-left: 60vw;
+    width: 40vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: #f8f8f8;
+    position: relative;
+    z-index: 2;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.04);
+}
+.details {
+    background: #7a8c6e;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.details h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+.rsvp-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2.2rem;
+    background: #fff;
+    color: #7a8c6e;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+.rsvp-btn:hover {
+    background: #e6e6e6;
+    color: #5a6c4e;
+}
+.story {
+    background: #fff;
+    color: #222;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.story h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.rsvp-section {
+    background: #f3f3e6;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.rsvp-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.rsvp-form input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.rsvp-form button {
+    padding: 0.8rem;
+    background: #7a8c6e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.rsvp-form button:hover {
+    background: #5a6c4e;
+}
+section {
+    scroll-margin-top: 80px;
+}
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .hero-fixed {
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+        min-height: 220px;
+    }
+    .hero-image {
+        min-height: 220px;
+    }
+    .scrollable-content {
+        margin-left: 0;
+        width: 100vw;
+        height: calc(60vh - 80px);
+        min-height: 60vh;
+    }
+}
+@media (max-width: 700px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+    .hero-overlay {
+        padding: 1.5rem 1rem 1.2rem 1.2rem;
+    }
+    .hero-fixed {
+        height: 30vh;
+        min-height: 140px;
+    }
+    .scrollable-content {
+        height: calc(70vh - 80px);
+        min-height: 70vh;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero {
+        flex-direction: column;
+        min-height: unset;
+        padding-top: 80px;
+    }
+    .hero-image {
+        width: 100%;
+        min-height: 180px;
+        border-radius: 0;
+    }
+    .hero-overlay {
+        border-radius: 0 0 12px 12px;
+        padding: 2rem 1rem;
+    }
+    .details, .story, .rsvp-section, .address-section {
+        padding: 2rem 1rem;
+    }
+}
+.address-section {
+    background: #fff;
+    color: #222;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.address-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
