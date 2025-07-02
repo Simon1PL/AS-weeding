@@ -15,6 +15,57 @@ navLinks.forEach(link => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+    });
+    // Optional: close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Rotating hero images with fade effect
+    const images = ['zdj1.jpg', 'zdj2.jpg', 'zdj3.jpg', 'zdj4.jpg'];
+    const imagesMobile = ['zdj1-small.jpg', 'zdj2.jpg', 'zdj3.jpg', 'zdj4.jpg'];
+    let idx = Math.floor(Math.random() * images.length); // start from random image
+    const hero = document.querySelector('.hero-image');
+    // Remove previous overlay if exists
+    let imgEl = hero.querySelector('.hero-fade-img');
+    if (!imgEl) {
+        imgEl = document.createElement('div');
+        imgEl.className = 'hero-fade-img';
+        imgEl.style.position = 'absolute';
+        imgEl.style.top = 0;
+        imgEl.style.left = 0;
+        imgEl.style.width = '100%';
+        imgEl.style.height = '100%';
+        imgEl.style.zIndex = 1;
+        imgEl.style.opacity = 0;
+        imgEl.style.transition = 'opacity 0.8s';
+        hero.insertBefore(imgEl, hero.firstChild);
+    }
+    function setHeroBg(immediate = false) {
+        const isMobile = window.matchMedia('(max-width: 700px)').matches;
+        const arr = isMobile ? imagesMobile : images;
+        imgEl.style.background = `url('${arr[idx]}') right top/cover no-repeat`;
+        imgEl.style.opacity = 1;
+        setTimeout(() => {
+            hero.style.background = `url('${arr[idx]}') right top/cover no-repeat`;
+            imgEl.style.opacity = 0;
+        }, immediate ? 0 : 800);
+    }
+    setHeroBg(true);
+    setInterval(() => {
+        idx = (idx + 1) % images.length;
+        setHeroBg();
+    }, 10000);
+    window.addEventListener('resize', () => setHeroBg(true));
+});
+
 // Countdown timer to 30.04.2026
 function updateCountdown() {
     const countdown = document.getElementById('countdown-timer');

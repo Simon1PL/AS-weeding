@@ -5,16 +5,29 @@ body, html {
     overflow: hidden;
 }
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Cormorant Garamond';
     background: #f8f8f8;
     color: #222;
     font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.7;
 }
 .main-layout {
     display: flex;
     height: 100vh;
     width: 100vw;
     position: relative;
+}
+.small-screen {
+    display: none;
+}
+@media (max-width: 700px) {
+    .big-screen {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+    }
 }
 .navbar {
     position: absolute;
@@ -69,21 +82,29 @@ body {
 .hero-image {
     width: 100%;
     height: 100%;
-    background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+    background: url('zdj2.jpg') right top/cover no-repeat;
     position: relative;
     display: flex;
     align-items: flex-end;
+}
+@media (max-width: 700px) {
+    .hero-image {
+        background: url('zdj1-small.jpg') center top/cover no-repeat;
+        height: auto;
+        min-height: 0;
+    }
 }
 .hero-overlay {
     width: 100%;
     background: rgba(0, 0, 0, 0);
     padding: 3rem 2rem 2.5rem 2.5rem;
     border-radius: 0 0 0 0;
-    text-align: left;
+    text-align: center;
     position: absolute;
     left: 0;
     bottom: 0;
     color: white;
+    z-index: 3;
 }
 .hero-overlay h1 {
     font-size: 2.8rem;
@@ -93,9 +114,9 @@ body {
 .scrollable-content {
     margin-left: auto;
     margin-right: 0;
+    padding-bottom: 2rem;
     height: 100vh;
     width: calc((var(--karta-width) / var(--karta-height)) * 100vh);
-    min-width: 0;
     max-width: 100vw;
     overflow-y: auto;
     background: transparent;
@@ -105,6 +126,32 @@ body {
     padding-left: 15px; /* scroll is right padding */
     box-sizing: border-box;
     border-radius: 10px;
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 18px,
+        black 35px,
+        black calc(100% - 35px),
+        transparent calc(100% - 18px),
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 18px,
+        black 35px,
+        black calc(100% - 35px),
+        transparent calc(100% - 18px),
+        transparent 100%
+    );
+}
+@media (max-width: 700px) {
+    .scrollable-content {
+        width: 100vw;
+        height: calc((var(--karta-height) / var(--karta-width)) * 100vw);
+        min-height: calc((var(--karta-height) / var(--karta-width)) * 100vw);
+        margin-top: auto;
+    }
 }
 .scrollable-content::before {
     content: '';
@@ -120,12 +167,20 @@ body {
     z-index: 1;
     pointer-events: none;
 }
+@media (max-width: 700px) {
+    .scrollable-content::before {
+        width: 100vw;
+        height: calc((var(--karta-height) / var(--karta-width)) * 100vw);
+        bottom: 0;
+        top: auto;
+    }
+}
 .scrollable-content > * {
     position: relative;
     z-index: 2;
 }
 .details {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0px;
     text-align: center;
     position: relative;
 }
@@ -141,7 +196,7 @@ body {
     text-align: center;
 }
 .story {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0px;
     text-align: center;
 }
 .story h2 {
@@ -149,7 +204,7 @@ body {
     margin-bottom: 1rem;
 }
 .rsvp-section {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0px;
     text-align: center;
 }
 .rsvp-section h2 {
@@ -185,27 +240,10 @@ body {
 section {
     scroll-margin-top: 80px;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .main-layout {
         flex-direction: column;
     }
-    .hero-fixed {
-        position: relative;
-        width: 100vw;
-        height: 40vh;
-        min-height: 220px;
-    }
-    .hero-image {
-        min-height: 220px;
-    }
-    .scrollable-content {
-        margin-left: 0;
-        width: 100vw;
-        height: calc(60vh - 80px);
-        min-height: 60vh;
-    }
-}
-@media (max-width: 700px) {
     .hero-overlay h1 {
         font-size: 2rem;
     }
@@ -213,12 +251,8 @@ section {
         padding: 1.5rem 1rem 1.2rem 1.2rem;
     }
     .hero-fixed {
-        height: 30vh;
-        min-height: 140px;
-    }
-    .scrollable-content {
-        height: calc(70vh - 80px);
-        min-height: 70vh;
+        position: relative;
+        width: 100vw;
     }
     .nav-container {
         flex-direction: column;
@@ -231,7 +265,6 @@ section {
     }
     .hero-image {
         width: 100%;
-        min-height: 180px;
         border-radius: 0;
     }
     .hero-overlay {
@@ -243,7 +276,7 @@ section {
     }
 }
 .address-section {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0px;
     text-align: center;
 }
 .address-section h2 {
@@ -259,7 +292,55 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+/* Hamburger menu styles for small screens */
+@media (max-width: 700px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        z-index: 10;
+        padding: 0;
+    }
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 254, 254, 0.801);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: auto;
+        padding: 0.5rem 1.5rem;
+        gap: 0;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .navbar .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #222;
+    }
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+}
 :root {
     --karta-width: 744;
     --karta-height: 1039;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant Garamond&display=swap');
