@@ -108,4 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateCountdowns();
     setInterval(updateCountdowns, 15000); // update every minute
+
+    // Enable horizontal scroll with mouse wheel
+    container.addEventListener('wheel', function(e) {
+        if (e.deltaY !== 0) {
+            e.preventDefault();
+            container.scrollBy({
+                left: e.deltaY,
+                behavior: 'smooth'
+            });
+        }
+    }, { passive: false });
 });
