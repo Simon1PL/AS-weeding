@@ -37,7 +37,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 h1 {
@@ -141,11 +141,14 @@ h1 {
     width: 100%;
 }
 .wedding-photo {
-    width: 480px;
+    width: 580px;
     max-width: 80vw;
-    height: 300px;
+    max-width: 900px;
+    flex: 1 1 auto;
+    height: 0;
+    min-height: 200px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 10px;
     margin-bottom: 2vh;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
@@ -219,4 +222,10 @@ h1 {
 .wedding-location-big, .wedding-day-label span {
     flex-direction: row;
     gap: 10px;
+}
+.wedding-plan {
+    font-weight: 600;
+}
+.information {
+    line-height: 1.6;
 }
