@@ -8,6 +8,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #fcf7eb;
 }
 
 .container {
@@ -38,6 +39,8 @@ html, body {
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h1 {
@@ -47,7 +50,6 @@ h1 {
 }
 
 .page1, .page2, .page3 {
-    background: #fcfaf5;
     color: #222;
     flex-direction: column;
     justify-content: flex-start;
@@ -64,7 +66,6 @@ h1 {
     align-items: center;
     justify-content: end;
     text-align: center;
-    background: #fcfaf5;
     z-index: 10;
     position: relative;
 }
@@ -114,6 +115,8 @@ h1 {
     display: flex;
     gap: 2.5rem;
     justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .nav-link {
     color: #888;
@@ -143,10 +146,9 @@ h1 {
 .wedding-photo {
     width: 580px;
     max-width: 80vw;
-    max-width: 900px;
     flex: 1 1 auto;
     height: 0;
-    min-height: 200px;
+    min-height: 100px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 2vh;
@@ -154,10 +156,23 @@ h1 {
 }
 .wedding-info-row {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 32px;
     margin-bottom: 1.5vh;
+}
+.wedding-info-divider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.info-hr {
+    border: none;
+    border-left: 2px solid #e0e0e0;
+    height: 60px;
+    width: 0;
+    margin: 0 12px;
+    background: none;
 }
 .wedding-date-block, .wedding-location-block {
     text-align: center;
@@ -238,4 +253,68 @@ h1 {
     z-index: 9999;
     opacity: 0;
     pointer-events: auto;
+}
+.mobile {
+    display: none;
+}
+@media (max-width: 520px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .wedding-header {
+        margin-top: 15px;
+    }
+    .wedding-title {
+        font-size: 1.6rem;
+    }
+    .wedding-header {
+        height: 180px;
+        min-height: 180px;
+        max-height: 180px;
+    }
+    .container {
+        height: calc(100vh - 180px);
+    }
+    .wedding-date-big {
+        font-size: 1.0rem;
+    }
+    .wedding-date-big span {
+        font-size: 0.9rem;
+    }
+    .wedding-location-big {
+        font-size: 1.0rem;
+    }
+    .wedding-location-big span {
+        font-size: 0.9rem;
+    }
+    .wedding-day-label {
+        font-size: 0.8rem;
+    }
+    .wedding-script {
+        margin-bottom: 0.1rem;
+    }
+    .wedding-date-location {
+        margin-top: 1.0rem;
+        margin-bottom: 1.0rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .wedding-header {
+        height: 230px;
+        min-height: 230px;
+        max-height: 230px;
+    }
+    .container {
+        height: calc(100vh - 230px);
+    }
+}
+
+@media (max-height: 760px) {
+    .page2 .wedding-photo {
+        display: none;
+    }
 }
