@@ -157,8 +157,8 @@ h1 {
 .wedding-info-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 32px;
+    justify-content: space-around;
+    gap: 5px;
     margin-bottom: 1.5vh;
 }
 .wedding-info-divider {
@@ -257,6 +257,15 @@ h1 {
 .mobile {
     display: none;
 }
+.info-hr {
+  border: none;
+  border-left: 2px solid #e0e0e0;
+  height: 60px;
+  width: 0;
+  margin: 0 12px;
+  background: none;
+}
+
 @media (max-width: 520px) {
     .desktop {
         display: none;
@@ -302,14 +311,14 @@ h1 {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 367px) {
     .wedding-header {
-        height: 230px;
-        min-height: 230px;
-        max-height: 230px;
+        height: 195px;
+        min-height: 195px;
+        max-height: 195px;
     }
     .container {
-        height: calc(100vh - 230px);
+        height: calc(100vh - 195px);
     }
 }
 
