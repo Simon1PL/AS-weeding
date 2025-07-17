@@ -1,119 +1,111 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="logo_grube.png">
     <title>A&S</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-layout">
-        <nav class="navbar navbar-left small-screen">
-            <div class="nav-container">
-                <button class="menu-toggle" aria-label="Menu">&#9776;</button>
-                <ul class="nav-links">
-                    <li><a href="#details">Data</a></li>
-                    <li><a href="#story">Historia</a></li>
-                    <li><a href="#powrot">Powrót</a></li>
-                    <li><a href="#nocleg">Nocleg</a></li>
-                    <li><a href="#address">Dojazdy</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </div>
+    <div class="wedding-header">
+        <div class="wedding-script">
+            To dla nas ogromna radość,
+            <br>
+            że możemy dzielić ten dzień z najbliższymi
+        </div>
+        <div class="wedding-title wedding-title-logo">
+            ALICJA
+            <img src="logo_grube.png" alt="Logo" class="wedding-logo-inline">
+            SZYMON
+        </div>
+        <div class="wedding-date-location">Do ślubu: ... dni</div>
+        <nav class="wedding-nav">
+            <span class="nav-link" data-page="0">Ślub i wesele</span>
+            <span class="nav-link" data-page="1">Informacje</span>
+            <span class="nav-link" data-page="2">Plan wesela</span>
         </nav>
-        <section id="home" class="hero-fixed">
-            <nav class="navbar navbar-left big-screen">
-                <div class="nav-container">
-                    <button class="menu-toggle" aria-label="Menu">&#9776;</button>
-                    <ul class="nav-links">
-                        <li><a href="#details">Data</a></li>
-                        <li><a href="#story">Historia</a></li>
-                        <li><a href="#powrot">Powrót</a></li>
-                        <li><a href="#nocleg">Nocleg</a></li>
-                        <li><a href="#address">Dojazdy</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
-                    </ul>
+    </div>
+    <div class="container">
+        <section class="page page1">
+            <div class="wedding-main">
+                <img class="wedding-photo" src="zdj1.jpg" alt="photo">
+                <div class="wedding-info-row">
+                    <div class="wedding-date-block">
+                        <div class="wedding-date-big">30 KWIETNIA 2026<span>CZWARTEK 16:00</span></div>
+                    </div>
+                    <div class="wedding-location-block">
+                        <div class="wedding-location-big">
+                            KOŚCIÓŁ ŚW ANNY
+                            <span>KRAKÓW</span>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-            <div class="hero-image">
-            </div>
-            <div class="hero-overlay">
-                <h1>Alicja & Szymon</h1>
-                <p class="big-screen">To dla nas ogromna radość, że możemy dzielić ten dzień z najbliższymi.</br>Sprawdź, gdzie i kiedy widzimy się i bawimy!</p>
+                <div class="wedding-day-label">
+                    ŚLUB<br>
+                    <span>30 kwietnia 2026 16:00, Kościół św Anny w Krakowie
+                        <a href="https://maps.app.goo.gl/2xef2ApREdzSx44H9" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
+                    </span>
+                </div>
+                <br>
+                <div class="wedding-day-label">
+                    WESELE<br>
+                    <span>Stary Dwór, Szembeków 4, 32-566 Poręba Żegoty
+                        <a href="https://maps.app.goo.gl/crwF4dMqtA87AHr69" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
+                    </span>
+                </div>
+                <br>
+                <div class="wedding-day-label">
+                    POPRAWINY<br>
+                    <span>
+                        Dzień po weselu będziemy na Was czekać od 13:00
+                        <br>
+                        W Klubie Wojsk Specjalnych na ul. Praskiej 70 przy Zakrzówku.
+                        <a href="https://maps.app.goo.gl/25B98Nx8YC2457ui8" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
+                    </span>
+                </div>
             </div>
         </section>
-        <div class="scrollable-content">
-            <section id="details" class="details">
-                <h2>30 kwietnia 2026</h2>
-                <p><strong>Ślub: </strong> godzina 16:00, Kościół św Anny w Krakowie</p>
-                <p><strong>Wesele:</strong> Stary Dwór Poręba Żegoty</p>
-                <div class="countdown-timer" id="countdown-timer"></div>
-            </section>
-            <section id="story" class="story">
-                <h2>Historia</h2>
-                <p>Poznaliśmy się na koncercie Guziora...</p>
-                <div>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7uWyXPJ04ihdQdYGGw3xVV?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <section class="page page2">
+            <div class="wedding-main information">
+                <div class="wedding-day-label">
+                    PARKING PRZY KOŚCIELE<br>
+                    <span>Kościół znajduje się na rynku, ale zachęcamy do wjechania i skorzystania z parkingu znajdującego się przy samym kościele.</span>
                 </div>
-            </section>
-            <section id="powrot" class="story">
-                <h2>Powrót po weselu</h2>
-                <p>WKRÓTCE</p>
-                <p style="display: none;">Bus będzie odjeżdżał o godzinie 2:00 oraz 4:30 i odwoził ludzi pod dom.</p>
-            </section>
-            <section id="nocleg" class="story">
-                <h2>Nocleg</h2>
-                <p>Dla osób które nocują w hotelu, znajduje się on przy sali weselnej.</br>Doba zaczyna się w czwartek o 12, kończy się w piątek o 14.</p>
-            </section>
-            <section id="address" class="address-section">
-                <div class="address-info">
-                    <h2>Dojazdy</h2>
-                    <p>Kościół św. Anny w Krakowie</p>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.481874668507!2d19.930818976187236!3d50.06227847152066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0c290fdcf5%3A0xac0f6f81026bcc7!2zS2_Fm2Npw7PFgiBSenltc2tva2F0b2xpY2tpIHB3LiDFm3cuIEFubnk!5e1!3m2!1spl!2spl!4v1751407907042!5m2!1spl!2spl" 
-                            width="90%" 
-                            height="200" 
-                            style="border:0; border-radius:12px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <p>Sala weselna Stary Dwór Poręba Żegoty</p>
-                    <p>Szembeków 4, 32-566 Poręba Żegoty</p>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.9169526668015!2d19.568039476186676!3d50.053181671519134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716f3579a1b76f1%3A0x2d72438ba2b91f18!2zU3RhcnkgRHfDs3IgUG9yxJliYSDFu2Vnb3R5!5e1!3m2!1spl!2spl!4v1751408136552!5m2!1spl!2spl" 
-                            width="90%" 
-                            height="200" 
-                            style="border:0; border-radius:12px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <p>Poprawiny, Klub Wojsk Specjalnych na ul. Praskiej 70</p>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2295.383307832516!2d19.9047646761861!3d50.04342957151738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0008ae9e9b%3A0x5c5b37dbcd43f0da!2sKlub%20Wojsk%20Specjalnych!5e1!3m2!1spl!2spl!4v1751408366485!5m2!1spl!2spl" 
-                            width="90%" 
-                            height="200" 
-                            style="border:0; border-radius:12px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                <br>
+                <div class="wedding-day-label">
+                    PRZEJAZD Z KOŚCIOŁA NA WESELE<br>
+                    <span>W miarę możliwości prosimy zabrać się z osobami będącymi autami, dla reszty osób zorganizujemy ubera.</span>
                 </div>
-            </section>
-            <section id="kontakt" class="story">
-                <h2>Jeśli macie jakieś pytania, dzwońcie!</h2>
-                <p>Ala 604 997 861</br>Szymon 606 717 717</p>
-            </section>
-        </div>
+                <br>
+                <div class="wedding-day-label">
+                    NOCLEG<br>
+                    <span>Dla osób które nocują w hotelu, znajduje się on przy sali weselnej. Doba zaczyna się w czwartek o 12, kończy się w piątek o 14.</span>
+                </div>
+                <br>
+                <div class="wedding-day-label">
+                    POWRÓT PO WESELU<br>
+                    <span>WKRÓTCE</span>
+                </div>
+                <br>
+                <img class="wedding-photo" src="zdj5.jpg" alt="photo">
+            </div>
+        </section>
+        <section class="page page3">
+            <div class="wedding-main">
+                <img class="wedding-photo" src="zdj3.jpg" alt="photo">
+                <div class="wedding-day-label">
+                    <p class="wedding-plan">JESZCZE NIE MA ŻADNEGO PLANU :)</p><br>
+                    <span>W przyszłości może pojawią się tu takie rzeczy jak godziny atrakcji/posiłków czy rozpis stołów.</span>
+                </div>
+                <br>
+            </div>
+        </section>
     </div>
-    <script src="script.js"></script>
+    <a href="/2.html" class="invisible-link" tabindex="-1" aria-label="Przejdź do wersji 2"></a>
+    <script src="script2.js"></script>
 </body>
 </html>

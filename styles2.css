@@ -229,3 +229,13 @@ h1 {
 .information {
     line-height: 1.6;
 }
+.invisible-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: auto;
+}
