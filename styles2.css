@@ -280,12 +280,12 @@ h1 {
         font-size: 1.6rem;
     }
     .wedding-header {
-        height: 180px;
-        min-height: 180px;
-        max-height: 180px;
+        height: 130px;
+        min-height: 130px;
+        max-height: 130px;
     }
     .container {
-        height: calc(100vh - 180px);
+        height: calc(100vh - 130px);
     }
     .wedding-date-big {
         font-size: 1.0rem;
@@ -316,12 +316,12 @@ h1 {
 
 @media (max-width: 367px) {
     .wedding-header {
-        height: 195px;
-        min-height: 195px;
-        max-height: 195px;
+        height: 145px;
+        min-height: 145px;
+        max-height: 145px;
     }
     .container {
-        height: calc(100vh - 195px);
+        height: calc(100vh - 145px);
     }
 }
 
