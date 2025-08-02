@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     });
 
+    const link = document.getElementById("calendar-link");
+    const isiOS = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent);
+    if (!isiOS) {
+        const googleCalendarUrl =
+        "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ślub+-+Alicja+%26+Szymon" +
+        "&dates=20260430T140000Z/20260430T200000Z" +
+        "&details=Ślub+i+wesele+Alicji+i+Szymona+30+kwietnia+2026+r.+o+16:00+w+Kościele+św.+Anny+w+Krakowie" +
+        "&location=Kościół+św.+Anny+w+Krakowie,+ul.+św.+Anny+11,+31-008+Kraków";
+        
+        link.setAttribute("href", googleCalendarUrl);
+        link.setAttribute("target", "_blank");
+        link.setAttribute("title", "Dodaj do kalendarza Google");
+        link.removeAttribute("download");
+    }
+
     // Handle mouse drag scrolling
     container.addEventListener('mousedown', (e) => {
         isMouseDown = true;
