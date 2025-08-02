@@ -101,10 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const countdownText = `Do ślubu: ${days} dni, ${hours} godzin, ${minutes} minut`;
-        document.querySelectorAll('.wedding-date-location').forEach(el => {
-            el.innerHTML = el.innerHTML.replace(/Do ślubu:.*/, countdownText);
-        });
+        if(document.getElementById('countdown-days'))
+            document.getElementById('countdown-days').textContent = days;
+        if(document.getElementById('countdown-hours'))
+            document.getElementById('countdown-hours').textContent = hours;
+        if(document.getElementById('countdown-minutes'))
+            document.getElementById('countdown-minutes').textContent = minutes;
     }
     updateCountdowns();
     setInterval(updateCountdowns, 15000); // update every minute

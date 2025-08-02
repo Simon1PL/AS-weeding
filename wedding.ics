@@ -1,13 +1,14 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Ala & Szymon Wedding//EN
+PRODID:-//Alicja & Szymon Wedding//EN
 BEGIN:VEVENT
-UID:ala-szymon-wedding-20260430T160000
+UID:alicja-szymon-wedding-20260430T160000
 DTSTAMP:20250430T140000Z
 DTSTART:20260430T140000Z
 DTEND:20260430T200000Z
-SUMMARY:Ślub - Ala & Szymon
-DESCRIPTION:Ślub i wesele Alicji i Szymona 30 kwietnia 2026 r. o 16:00 Kraków
-LOCATION:Kraków
+SUMMARY:Ślub - Alicja & Szymon
+DESCRIPTION:Ślub i wesele Alicji i Szymona 30 kwietnia 2026 r. o 16:00
+LOCATION:Kościół św. Anny w Krakowie
+URL:https://maps.app.goo.gl/2xef2ApREdzSx44H9
 END:VEVENT
 END:VCALENDAR
