@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="styles2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&family=Fleur+De+Leah&family=Luxurious+Script&family=Mea+Culpa&family=Waterfall&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wedding-header">
         <div class="wedding-script desktop">
             To dla nas ogromna radość,
             <br>
-            że możemy dzielić ten dzień z najbliższymi
+            że możemy dzielić ten dzień z Wami.
         </div>
         <div class="wedding-title wedding-title-logo">
-            ALICJA
-            <img src="logo_grube.png" alt="Logo" class="wedding-logo-inline">
-            SZYMON
+            <div class="wedding-title-col-1">
+                <span>ALICJA</span>
+            </div>
+            <div class="wedding-title-logo-center">
+                <img src="logo_grube.png" alt="Logo" class="wedding-logo-inline">
+            </div>
+            <div class="wedding-title-col-2">
+                <span>SZYMON</span>
+            </div>
         </div>
         <div class="wedding-date-location">Do ślubu: ... dni</div>
         <nav class="wedding-nav">
-            <span class="nav-link" data-page="0">Ślub i wesele</span>
-            <span class="nav-link" data-page="1">Informacje</span>
-            <span class="nav-link" data-page="2">Kontakt</span>
+            <span class="nav-link" style="display: inline-flex; justify-content: end;" data-page="0"><span>Ślub i wesele</span></span>
+            <span class="nav-link" data-page="1"><span>Informacje</span></span>
+            <span class="nav-link" style="display: inline-flex; justify-content: start;" data-page="2"><span>Kontakt</span></span>
         </nav>
     </div>
     <div class="container">
@@ -35,38 +41,58 @@
                 <img class="wedding-photo" src="zdj1.jpg" alt="photo">
                 <div class="wedding-info-row">
                     <div class="wedding-date-block">
-                        <div class="wedding-date-big">30 KWIETNIA 2026<span>CZWARTEK 16:00</span></div>
+                        <a style="color: inherit; text-decoration: none;" href="wedding.ics" download title="Dodaj do kalendarza (Android/iPhone)">
+                        <div class="wedding-date-big">
+                            30 KWIETNIA 2026
+                            <span style="display: flex; align-items: center; justify-content: center;">
+                                CZWARTEK 16:00
+                                    <span style="max-height: 21px; overflow: visible; margin: 0">
+                                        <span class="icon-calendar" style="margin: 0; position: relative; top: -3px;"></span>
+                                    </span>
+                            </span>
+                        </div>
+                        </a>
                     </div>
                     <hr class="info-hr">
                     <div class="wedding-location-block">
+                        <a style="color: inherit; text-decoration: none;" href="https://maps.app.goo.gl/2xef2ApREdzSx44H9" target="_blank">
                         <div class="wedding-location-big">
                             KOŚCIÓŁ ŚW ANNY
-                            <span>KRAKÓW</span>
+                            <span style="display: flex; align-items: center; justify-content: center;">
+                                KRAKÓW
+                                <span style="overflow: visible; height: 21px; margin: 0;">
+                                    <span style="position: relative; top: -10px;" class="icon-map"></span>
+                                </span>
+                            </span>
                         </div>
+                        </a>
                     </div>
                 </div>
                 <div class="wedding-day-label">
-                    ŚLUB<br>
-                    <span>30 kwietnia 2026 16:00, Kościół św Anny w Krakowie
-                        <a href="https://maps.app.goo.gl/2xef2ApREdzSx44H9" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
-                    </span>
-                </div>
-                <br>
-                <div class="wedding-day-label">
                     WESELE<br>
-                    <span>Stary Dwór, Szembeków 4, 32-566 Poręba Żegoty
-                        <a href="https://maps.app.goo.gl/crwF4dMqtA87AHr69" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
-                    </span>
+                    <a href="https://maps.app.goo.gl/crwF4dMqtA87AHr69" target="_blank" class="map-link" style="color: inherit; text-decoration: none;">
+                        <span style="display: flex; align-items: center; justify-content: center; gap: 0em;">
+                            Stary Dwór, Szembeków 4, 32-566 Poręba Żegoty
+                            <span style="overflow: visible; height: 21px; margin: 0;">
+                                <span style="display: inline-block; border-radius: 50%; padding: 2px;" class="icon-map"></span>
+                            </span>
+                        </span>
+                    </a>
                 </div>
                 <br>
                 <div class="wedding-day-label">
                     POPRAWINY<br>
-                    <span>
-                        Dzień po weselu będziemy na Was czekać od 13:00
-                        <br>
-                        W Klubie Wojsk Specjalnych na ul. Praskiej 70 przy Zakrzówku.
-                        <a href="https://maps.app.goo.gl/25B98Nx8YC2457ui8" target="_blank" class="map-link"><img src="maps.png" alt="Mapa" class="map-icon"></a>
-                    </span>
+                    <a href="https://maps.app.goo.gl/25B98Nx8YC2457ui8" target="_blank" class="map-link" style="color: inherit; text-decoration: none;">
+                        <span style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2em;">
+                            Dzień po weselu będziemy na Was czekać od 13:00
+                            <span style="display: flex; align-items: center; justify-content: center; gap: 0em;">
+                                W Klubie Wojsk Specjalnych na ul. Praskiej 70 przy Zakrzówku
+                                <span style="overflow: visible; height: 21px; margin: 0;">
+                                    <span style="display: inline-block; border-radius: 50%; padding: 2px;" class="icon-map"></span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
