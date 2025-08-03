@@ -209,10 +209,12 @@ h1 {
     color: #fff;
     text-align: center;
     margin-top: 0.5vh;
+    font-weight: bold;
 }
 .wedding-day-label span {
     font-size: 0.95rem;
     color: #f1dadc;
+    font-weight: normal;
 }
 .wedding-logo {
     display: block;
