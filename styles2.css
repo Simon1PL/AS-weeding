@@ -432,7 +432,7 @@ a:hover .icon-map {
     display: none;
 }
 
-@media (max-width: 387px) {
+@media (max-width: 395px) {
     .day-big-screen {
         display: none;
     }
