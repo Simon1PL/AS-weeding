@@ -44,10 +44,6 @@ html, body {
     padding-right: 10px;
 }
 
-.page2 {
-    margin-bottom: 80px;
-}
-
 h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -448,5 +444,9 @@ a:hover .icon-map {
 @media (max-height: 760px) {
     .page2 .wedding-photo {
         display: none;
+    }
+
+    .page2 {
+        margin-bottom: 30px;
     }
 }
